@@ -4,9 +4,9 @@ Hi! 👋🏼
 
 This is a monorepo for experimenting with and showcasing technologies of interest.
 
-## Projects
+## Projects 🖥
 
-### [Frontend Projects](./projects/frontend-projects)
+### [Frontend Projects](./projects/frontend-projects) 🎨
 
 Runs on a next application, to spin up:
 
