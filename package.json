@@ -1,5 +1,7 @@
 {
   "name": "learning-repo",
   "private": true,
-  "workspaces": ["projects"]
+  "workspaces": [
+    "projects/*"
+  ]
 }
