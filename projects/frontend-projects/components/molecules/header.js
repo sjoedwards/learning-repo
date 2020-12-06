@@ -9,7 +9,7 @@ const Header = () => {
         <Link href="/">Home</Link>
       </li>
       <li className="u-margin-right-small">
-        <Link href="/grid">Grid</Link>
+        <Link href="/css-grid">CSS Grid</Link>
       </li>
     </ul>
   );
