@@ -8,7 +8,7 @@ This is a monorepo for experimenting with and showcasing technologies of interes
 
 ### [Frontend Projects](./projects/frontend-projects) 🎨
 
-Adhoc front-end only technologies
+Adhoc frontend technologies
 
 Runs on a next application, to spin up:
 
