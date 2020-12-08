@@ -1,7 +1,8 @@
 {
   "name": "learning-repo",
   "private": true,
-  "workspaces": [
-    "projects/*"
-  ]
+  "workspaces": {
+    "packages": ["projects/*"],
+    "nohoist": ["**/react-native", "**/react-native/**"]
+  }
 }
