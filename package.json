@@ -3,6 +3,6 @@
   "private": true,
   "workspaces": {
     "packages": ["projects/*"],
-    "nohoist": ["**/react-native", "**/react-native/**"]
+    "nohoist": ["**/react-native-vanilla", "**/react-native-vanilla/**"]
   }
 }
