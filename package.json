@@ -2,7 +2,12 @@
   "name": "learning-repo",
   "private": true,
   "workspaces": {
-    "packages": ["projects/*"],
-    "nohoist": ["**/react-native-vanilla", "**/react-native-vanilla/**"]
+    "packages": [
+      "projects/*"
+    ],
+    "nohoist": [
+      "**/react-native-vanilla",
+      "**/react-native-vanilla/**"
+    ]
   }
 }

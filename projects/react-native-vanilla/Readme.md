@@ -14,18 +14,26 @@ $ rvm use ruby-2.6.3
 $ rvm --default use 2.6.5
 ```
 
-Install Cocoapods
-
-```
-$ sudo gem install cocoapods
-```
-
 Install XCode from the App Store
 
 You may have to change the path of `xcode-select`
 
 ```
 $ sudo xcode-select --switch /Applications/Xcode.app
+```
+
+Install Cocoapods
+
+```
+$ sudo gem install cocoapods
+```
+
+Install pods
+
+```
+$ cd ios
+$ pod install
+
 ```
 
 Then to run metro:
