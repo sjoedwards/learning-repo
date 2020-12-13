@@ -14,7 +14,9 @@ $ rvm use ruby-2.6.3
 $ rvm --default use 2.6.5
 ```
 
-I also had to change the path of `xcode-select`
+Install XCode from the App Store
+
+You may have to change the path of `xcode-select`
 
 ```
 $ sudo xcode-select --switch /Applications/Xcode.app
@@ -25,6 +27,7 @@ Then to run metro:
 ```
 $ npx react-native start
 ```
+
 Leave this running, and in a new terminal run:
 
 ```
