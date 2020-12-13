@@ -17,3 +17,6 @@ $ cd projects/frontend-projects
 $ yarn
 $ yarn run dev
 ```
+### [React Native (Vanilla)](./projects/react-native-vanilla) 📱
+
+Project for experimenting with React Native to create cross platform mobile experiences
