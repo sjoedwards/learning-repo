@@ -6,8 +6,8 @@
       "projects/*"
     ],
     "nohoist": [
-      "**/react-native-vanilla",
-      "**/react-native-vanilla/**"
+      "**/ReactNativeVanilla",
+      "**/ReactNativeVanilla/**"
     ]
   }
 }
