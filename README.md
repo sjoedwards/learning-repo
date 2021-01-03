@@ -17,3 +17,10 @@ $ cd projects/frontend-projects
 $ yarn
 $ yarn run dev
 ```
+
+### Typescript ⌨️
+
+```
+$ cd projects/typescript
+$ yarn run dev
+```
