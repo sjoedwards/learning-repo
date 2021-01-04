@@ -32,3 +32,8 @@ $ yarn run dev
 ### [Kong 🦍](./projects/kong)
 
 WIP 🚧
+
+```
+// To start Kong
+$ docker-compose up
+```
