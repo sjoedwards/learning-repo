@@ -18,9 +18,17 @@ $ yarn
 $ yarn run dev
 ```
 
-### Typescript ⌨️
+- CSS GRID (WIP 🚧)
+
+### [Typescript ⌨️](./projects/typescript)
+
+WIP 🚧
 
 ```
 $ cd projects/typescript
 $ yarn run dev
 ```
+
+### [Kong 🦍](./projects/kong)
+
+WIP 🚧
