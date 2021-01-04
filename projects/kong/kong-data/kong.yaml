@@ -1,0 +1,78 @@
+_format_version: "1.1"
+services:
+- connect_timeout: 60000
+  host: node-kong
+  name: api-v1
+  port: 10000
+  protocol: http
+  read_timeout: 60000
+  retries: 5
+  write_timeout: 60000
+  routes:
+  - hosts:
+    - api.ct.id
+    id: 9e12d356-bfb4-4730-8f86-15266973d19e
+    methods:
+    - GET
+    paths:
+    - /api/v1/customers
+    path_handling: v0
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    strip_path: false
+    https_redirect_status_code: 426
+  - hosts:
+    - api.ct.id
+    id: c1ee1d72-6d4f-4c48-86e7-206f90bafb47
+    methods:
+    - POST
+    paths:
+    - /api/v1/clients
+    path_handling: v0
+    preserve_host: false
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    strip_path: false
+    https_redirect_status_code: 426
+    plugins:
+    - name: acl
+      config:
+        allow:
+        - managers
+        deny: null
+        hide_groups_header: false
+      enabled: true
+      protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+  plugins:
+  - name: key-auth
+    config:
+      anonymous: null
+      hide_credentials: false
+      key_in_body: false
+      key_names:
+      - apikey
+      run_on_preflight: true
+    enabled: true
+    protocols:
+    - grpc
+    - grpcs
+    - http
+    - https
+consumers:
+- username: manager
+  keyauth_credentials:
+  - key: X3iuX56VkKXg4Ry1grIzWsxInWnHGLQ5
+  acls:
+  - group: managers
+- username: reader
+  keyauth_credentials:
+  - key: 8STE67VhwN9qTUHiwizOf6UqEm5WOHz0
