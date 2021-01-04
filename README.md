@@ -44,4 +44,4 @@ $ docker-compose up
 - Create a user
 - Connections -> New Connection -> Kong Admin URL: http://kong:8001
 - Will now be connected to kong instance & can access Admin API
-- Kong can be called on http://localhost:8000, but needs to be sent with
+- Kong can be called on http://localhost:8000, but needs to be sent with host header of api.ct.id (See Kong.postman_collection.json)

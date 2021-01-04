@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "f47dbccf-c441-2e90-353b-af218508d104",
+		"_postman_id": "1ab532a5-9dde-4a10-b652-8251ec5978b6",
 		"name": "Kong",
 		"description": "This collection is for tutorial KONG basic",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -8,20 +8,18 @@
 	"item": [
 		{
 			"name": "Services",
-			"description": "",
 			"item": [
 				{
 					"name": "Services - List",
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
-							"raw": "localhost:9001/services",
+							"raw": "localhost:8001/services",
 							"host": [
 								"localhost"
 							],
-							"port": "9001",
+							"port": "8001",
 							"path": [
 								"services"
 							]
@@ -44,11 +42,11 @@
 							"raw": "{\n  \"name\": \"api-v1-customers\",\n  \"url\": \"http://172.19.0.4:10000\"\n}"
 						},
 						"url": {
-							"raw": "localhost:9001/services/",
+							"raw": "localhost:8001/services/",
 							"host": [
 								"localhost"
 							],
-							"port": "9001",
+							"port": "8001",
 							"path": [
 								"services",
 								""
@@ -62,16 +60,15 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"body": {},
 						"url": {
-							"raw": "localhost:9001/services/204876a1-7a78-4fb2-9c7c-8804d310d8f5",
+							"raw": "localhost:8001/services/296d59d2-38b7-4d69-b546-29737b26187a",
 							"host": [
 								"localhost"
 							],
-							"port": "9001",
+							"port": "8001",
 							"path": [
 								"services",
-								"204876a1-7a78-4fb2-9c7c-8804d310d8f5"
+								"296d59d2-38b7-4d69-b546-29737b26187a"
 							]
 						}
 					},
@@ -81,20 +78,18 @@
 		},
 		{
 			"name": "Routes",
-			"description": "",
 			"item": [
 				{
 					"name": "Routes - List",
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
-							"raw": "localhost:9001/routes",
+							"raw": "localhost:8001/routes",
 							"host": [
 								"localhost"
 							],
-							"port": "9001",
+							"port": "8001",
 							"path": [
 								"routes"
 							]
@@ -117,11 +112,11 @@
 							"raw": "{\n  \"hosts\": [\"api.ct.id\"],\n  \"paths\": [\"/api/v1/customers\"]\n}"
 						},
 						"url": {
-							"raw": "localhost:9001/services/api-v1-customers/routes/",
+							"raw": "localhost:8001/services/api-v1-customers/routes/",
 							"host": [
 								"localhost"
 							],
-							"port": "9001",
+							"port": "8001",
 							"path": [
 								"services",
 								"api-v1-customers",
@@ -137,13 +132,12 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"body": {},
 						"url": {
-							"raw": "localhost:9001/routes/034c40b4-d9d9-4e34-a8d3-94b0a2194cd6",
+							"raw": "localhost:8001/routes/034c40b4-d9d9-4e34-a8d3-94b0a2194cd6",
 							"host": [
 								"localhost"
 							],
-							"port": "9001",
+							"port": "8001",
 							"path": [
 								"routes",
 								"034c40b4-d9d9-4e34-a8d3-94b0a2194cd6"
@@ -156,20 +150,18 @@
 		},
 		{
 			"name": "Plugin",
-			"description": "",
 			"item": [
 				{
 					"name": "Plugins - Enabled",
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
-							"raw": "localhost:9001/plugins/enabled",
+							"raw": "localhost:8001/plugins/enabled",
 							"host": [
 								"localhost"
 							],
-							"port": "9001",
+							"port": "8001",
 							"path": [
 								"plugins",
 								"enabled"
@@ -183,13 +175,12 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
-							"raw": "localhost:9001/plugins",
+							"raw": "localhost:8001/plugins",
 							"host": [
 								"localhost"
 							],
-							"port": "9001",
+							"port": "8001",
 							"path": [
 								"plugins"
 							]
@@ -212,11 +203,11 @@
 							"raw": "{\n  \"name\": \"oauth2\",\n  \"config.scopes\": [\"read\", \"write\"],\n  \"config.mandatory_scope\": true,\n  \"config.enable_password_grant\": true,\n  \"config.accept_http_if_already_terminated\": true,\n  \"config.token_expiration\": 180,\n  \"config.global_credentials\": true\n}"
 						},
 						"url": {
-							"raw": "localhost:9001/services/api-v1-customers/plugins",
+							"raw": "localhost:8001/services/api-v1-customers/plugins",
 							"host": [
 								"localhost"
 							],
-							"port": "9001",
+							"port": "8001",
 							"path": [
 								"services",
 								"api-v1-customers",
@@ -231,13 +222,12 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"body": {},
 						"url": {
-							"raw": "localhost:9001/plugins/4f1dbb44-bb51-49b3-80d5-b0a5ac4f7caf",
+							"raw": "localhost:8001/plugins/4f1dbb44-bb51-49b3-80d5-b0a5ac4f7caf",
 							"host": [
 								"localhost"
 							],
-							"port": "9001",
+							"port": "8001",
 							"path": [
 								"plugins",
 								"4f1dbb44-bb51-49b3-80d5-b0a5ac4f7caf"
@@ -261,11 +251,11 @@
 							"raw": "{\n  \"name\": \"acl\",\n  \"config.whitelist\": \"group-api-v1-customers\"\n}"
 						},
 						"url": {
-							"raw": "localhost:9001/services/api-v1-customers/plugins",
+							"raw": "localhost:8001/services/api-v1-customers/plugins",
 							"host": [
 								"localhost"
 							],
-							"port": "9001",
+							"port": "8001",
 							"path": [
 								"services",
 								"api-v1-customers",
@@ -279,20 +269,18 @@
 		},
 		{
 			"name": "Consumer",
-			"description": "",
 			"item": [
 				{
 					"name": "Consumers - List",
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
-							"raw": "localhost:9001/consumers",
+							"raw": "localhost:8001/consumers",
 							"host": [
 								"localhost"
 							],
-							"port": "9001",
+							"port": "8001",
 							"path": [
 								"consumers"
 							]
@@ -306,7 +294,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "fa5431bd-b3c0-4cf5-8f2c-394a0cbf9250",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -327,11 +314,11 @@
 							"raw": "{\n  \"username\": \"oneone@gmail.com\",\n  \"custom_id\": \"11\"\n}"
 						},
 						"url": {
-							"raw": "localhost:9001/consumers",
+							"raw": "localhost:8001/consumers",
 							"host": [
 								"localhost"
 							],
-							"port": "9001",
+							"port": "8001",
 							"path": [
 								"consumers"
 							]
@@ -345,7 +332,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "fa5431bd-b3c0-4cf5-8f2c-394a0cbf9250",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -366,11 +352,11 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "localhost:9001/consumers/8f46d90a-25ab-4025-90e5-fe6538b394cc",
+							"raw": "localhost:8001/consumers/8f46d90a-25ab-4025-90e5-fe6538b394cc",
 							"host": [
 								"localhost"
 							],
-							"port": "9001",
+							"port": "8001",
 							"path": [
 								"consumers",
 								"8f46d90a-25ab-4025-90e5-fe6538b394cc"
@@ -384,7 +370,6 @@
 		},
 		{
 			"name": "ApplicationOAuth2",
-			"description": "",
 			"item": [
 				{
 					"name": "OAuth - Create Application",
@@ -401,11 +386,11 @@
 							"raw": "{\n  \"name\": \"APP 11\",\n  \"client_id\": \"CLIENT_ID_11\",\n  \"client_secret\": \"CLIENT_SECRET_11\",\n  \"redirect_uri\": \"http://localhost:9800/cb\"\n}"
 						},
 						"url": {
-							"raw": "localhost:9001/consumers/oneone@gmail.com/oauth2",
+							"raw": "localhost:8001/consumers/oneone@gmail.com/oauth2",
 							"host": [
 								"localhost"
 							],
-							"port": "9001",
+							"port": "8001",
 							"path": [
 								"consumers",
 								"oneone@gmail.com",
@@ -419,7 +404,6 @@
 		},
 		{
 			"name": "OAuthToken",
-			"description": "",
 			"item": [
 				{
 					"name": "OAuth - Request Token",
@@ -498,7 +482,6 @@
 		},
 		{
 			"name": "ACL",
-			"description": "",
 			"item": [
 				{
 					"name": "Associate Consumer",
@@ -515,11 +498,11 @@
 							"raw": "{\n  \"group\": \"group-api-v1-customers\"\n}"
 						},
 						"url": {
-							"raw": "localhost:9001/consumers/oneone@gmail.com/acls",
+							"raw": "localhost:8001/consumers/oneone@gmail.com/acls",
 							"host": [
 								"localhost"
 							],
-							"port": "9001",
+							"port": "8001",
 							"path": [
 								"consumers",
 								"oneone@gmail.com",
@@ -534,13 +517,12 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {},
 						"url": {
-							"raw": "localhost:9001/acls",
+							"raw": "localhost:8001/acls",
 							"host": [
 								"localhost"
 							],
-							"port": "9001",
+							"port": "8001",
 							"path": [
 								"acls"
 							]
@@ -564,7 +546,6 @@
 						"value": "bearer UYSLDGIZI8yIotLryGRp93jvF1YsYdHB"
 					}
 				],
-				"body": {},
 				"url": {
 					"raw": "localhost:9000/api/v1/customers",
 					"host": [
@@ -575,6 +556,48 @@
 						"api",
 						"v1",
 						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consume service - POST",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Host",
+						"value": "api.ct.id"
+					},
+					{
+						"key": "apikey",
+						"value": "8STE67VhwN9qTUHiwizOf6UqEm5WOHz0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"test\": \"test\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/customers/1234",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"1234"
 					]
 				}
 			},
