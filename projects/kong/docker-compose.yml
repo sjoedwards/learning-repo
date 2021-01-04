@@ -9,9 +9,16 @@ networks:
 
 services:
 
-  node-kong:
+  node-kong-1:
     build:
       context: ./node-kong
+    networks:
+      - kong-net
+  node-kong-2:
+    build:
+      context: ./node-kong
+      args:
+      - SERVICE=2
     networks:
       - kong-net
   kong-migrations:

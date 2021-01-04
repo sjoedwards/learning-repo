@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
+const service = process.env.SERVICE;
 
 const customers = [
   {
@@ -12,6 +13,19 @@ const customers = [
     id: 6,
     first_name: "Nyongot",
     last_name: "Gonzales",
+  },
+];
+
+const customers2 = [
+  {
+    id: 7,
+    first_name: "Dodol2",
+    last_name: "Dargombez2",
+  },
+  {
+    id: 8,
+    first_name: "Nyongot2",
+    last_name: "Gonzales2",
   },
 ];
 
@@ -31,7 +45,8 @@ const clients = [
 app.use(bodyParser.json());
 
 app.get("/api/v1/customers", (req, res) => {
-  res.json(customers);
+  console.log(service);
+  service === "1" ? res.json(customers) : res.json(customers2);
 });
 
 app.get("/api/v1/customers/:id", (req, res) => {
@@ -51,5 +66,5 @@ app.get("/api/v1/clients/:id", (req, res) => {
 });
 
 app.listen(10000, () => {
-  console.log(`Server started!`);
+  console.log(`Server started: service ${service}`);
 });
