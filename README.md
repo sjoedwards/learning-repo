@@ -1,8 +1,6 @@
 # Learning Repo
 
-Hi! 👋🏼
-
-This is a monorepo for experimenting with and showcasing technologies of interest.
+A monorepo for experimenting with and showcasing technologies of interest.
 
 ## Projects 🖥
 
