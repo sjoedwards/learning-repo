@@ -8,6 +8,12 @@ networks:
     external: false
 
 services:
+
+  node-kong:
+    build:
+      context: ./node-kong
+    networks:
+      - kong-net
   kong-migrations:
     image: "${KONG_DOCKER_TAG:-kong:latest}"
     command: kong migrations bootstrap
@@ -83,7 +89,6 @@ services:
     deploy:
       restart_policy:
         condition: on-failure
-    
   db:
     image: postgres:9.5
     environment:
@@ -107,6 +112,35 @@ services:
       - kong-net
     volumes:
       - kong_data:/var/lib/postgresql/data
+  
+  #######################################
+  # Konga database prepare
+  #######################################
+  konga-prepare:
+    image: pantsel/konga:latest
+    command: "-c prepare -a postgres -u postgresql://kong:${KONG_PG_PASSWORD:-kong}@db:5432/konga"
+    networks:
+      - kong-net
+    restart: on-failure
+    depends_on:
+      - db
+
+  #######################################
+  # Konga: Kong GUI
+  #######################################
+  konga:
+    image: pantsel/konga:latest
+    restart: always
+    networks:
+        - kong-net
+    environment:
+      DB_ADAPTER: postgres
+      DB_URI: postgresql://kong:${KONG_PG_PASSWORD:-kong}@db:5432/konga
+      NODE_ENV: development
+    depends_on:
+      - db
+    ports:
+      - "1337:1337"
 
 secrets:
   kong_postgres_password:

@@ -1,0 +1,3 @@
+- [ ] Provision Konga in docker-compose
+- [ ] Provision deck in docker-compose
+- [ ] Create docker-compose job to provision Kong service

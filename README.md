@@ -37,3 +37,11 @@ WIP 🚧
 // To start Kong
 $ docker-compose up
 ```
+
+#### To access GUI - after DC up
+
+- Go to http://localhost:1337
+- Create a user
+- Connections -> New Connection -> Kong Admin URL: http://kong:8001
+- Will now be connected to kong instance & can access Admin API
+- Kong can be called on http://localhost:8000, but needs to be sent with
